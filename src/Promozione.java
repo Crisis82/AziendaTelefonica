@@ -1,7 +1,9 @@
 import java.sql.Time;
 
 /**
- * classe per la gestione delle promozioni attivabili
+ * classe per la gestione delle promozioni attivabili.
+ * al momento della creazione la promozione è disattiva
+ * e verrà attivata dal suo gestore
  */
 public class Promozione {
     private String nome;
@@ -108,4 +110,19 @@ public class Promozione {
     public Byte getInternetMax() {
         return internetMax;
     }
+
+    /**
+     * attiva la promozione
+     */
+    public void Attiva(){
+        attiva=true;
+    }
+
+    /**
+     * disattiva la promozione
+     */
+    public void Disattiva(){
+        attiva = false;
+    }
+
 }
